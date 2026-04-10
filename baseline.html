@@ -1,23 +1,12 @@
-<table id="baselineTable">
-<thead>
-<tr><th>District</th><th>Planned</th><th>Achieved</th><th>% Completion</th><th>Cumulative</th></tr>
-</thead>
-<tbody></tbody>
-</table>
+<h1>Baseline Household Survey Dashboard</h1>
+<a href="index.html">Home</a>
 
-<script>
-fetch('data/data.json')
-  .then(r => r.json())
-  .then(data => {
-    const rows = data.baseline_districts.map(item => `
-      <tr>
-        <td>${item.district}</td>
-        <td>${item.planned}</td>
-        <td>${item.achieved}</td>
-        <td>${item.percent}%</td>
-        <td>${item.cumulative}</td>
-      </tr>
-    `).join('');
-    document.querySelector("#baselineTable tbody").innerHTML = rows;
-  });
-</script>
+<h2>District-wise Progress</h2>
+<table>
+<tr><th>District</th><th>Planned (Week)</th><th>Achieved</th><th>% Completion</th><th>Cumulative Progress</th></tr>
+<tr><td>Eluru</td><td>120</td><td>100</td><td>83%</td><td>100</td></tr>
+<tr><td>Krishna</td><td>40</td><td>26</td><td>65%</td><td>26</td></tr>
+<tr><td>NTR</td><td>50</td><td>32</td><td>64%</td><td>32</td></tr>
+<tr><td>YSR Kadapa</td><td>60</td><td>42</td><td>70%</td><td>42</td></tr>
+<tr><td>Vijiyanagaram</td><td>90</td><td>48</td><td>53%</td><td>48</td></tr>
+</table>
