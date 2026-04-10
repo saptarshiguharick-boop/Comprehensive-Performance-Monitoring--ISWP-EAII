@@ -1,1 +1,37 @@
-<!DOCTYPE html><html><body><h1>Performance Monitoring Dashboard</h1><a href="index.html">Home</a></body></html>
+<h1>Performance Monitoring Dashboard</h1>
+<a href="index.html">Home</a>
+
+<h2>District-wise Performance Monitoring</h2>
+
+<table id="performanceTable">
+<thead>
+<tr>
+    <th>District</th>
+    <th>Planned (Week)</th>
+    <th>Achieved</th>
+    <th>% Completion</th>
+    <th>Cumulative Progress</th>
+</tr>
+</thead>
+<tbody></tbody>
+</table>
+
+<script>
+// Load data.json dynamically
+fetch('data/data.json')
+  .then(response => response.json())
+  .then(data => {
+    const rows = data.performance_districts.map(item => `
+      <tr>
+        <td>${item.district}</td>
+        <td>${item.planned}</td>
+        <td>${item.achieved}</td>
+        <td>${item.percent}%</td>
+        <td>${item.cumulative}</td>
+      </tr>
+    `).join('');
+
+    document.querySelector("#performanceTable tbody").innerHTML = rows;
+  });
+</script>
+``
