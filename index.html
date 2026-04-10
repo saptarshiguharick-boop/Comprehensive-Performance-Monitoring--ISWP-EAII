@@ -1,9 +1,25 @@
-<!DOCTYPE html><html><body><h1>Dashboard Home</h1><a href="baseline.html">Baseline</a> | <a href="performance.html">Performance</a> | <a href="process.html">Process</a> | <a href="hfc.html">HFC</a></body></html>
 <h2>Field Progress Summary</h2>
-<table>
-<tr><th>Component</th><th>Planned (Week)</th><th>Achieved</th><th>% Completion</th><th>Cumulative Progress</th></tr>
-<tr><td>Listing (HHs)</td><td>600</td><td>540</td><td>90%</td><td>1,140</td></tr>
-<tr><td>Baseline HH Survey</td><td>240</td><td>228</td><td>95%</td><td>348</td></tr>
-<tr><td>Performance Monitoring (Sites)</td><td>150</td><td>142</td><td>95%</td><td>282</td></tr>
-<tr><td>Process Monitoring (Visits)</td><td>680</td><td>650</td><td>96%</td><td>1,210</td></tr>
+<table id="overallTable">
+<thead>
+<tr><th>Component</th><th>Cumulative Progress</th></tr>
+</thead>
+<tbody></tbody>
 </table>
+
+<script>
+fetch('data/data.json')
+  .then(response => response.json())
+  .then(data => {
+    const rows = data.overall_progress.map(item => `
+      <tr>
+        <td>${item.component}</td>
+        <td>${item.planned}</td>
+        <td>${item.achieved}</td>
+        <td>${item.percent}%</td>
+        <td>${item.cumulative}</td>
+      </tr>
+    `).join('');
+    document.querySelector("#overallTable tbody").innerHTML = rows;
+  });
+</script>
+``
