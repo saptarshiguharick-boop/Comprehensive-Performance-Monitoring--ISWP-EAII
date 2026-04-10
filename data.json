@@ -1,0 +1,32 @@
+{
+  "overall_progress": [
+    { "component": "Listing (HHs)", "planned": 600, "achieved": 540, "percent": 90, "cumulative": 1140 },
+    { "component": "Baseline HH Survey", "planned": 240, "achieved": 228, "percent": 95, "cumulative": 348 },
+    { "component": "Performance Monitoring (Sites)", "planned": 150, "achieved": 142, "percent": 95, "cumulative": 282 },
+    { "component": "Process Monitoring (Visits)", "planned": 680, "achieved": 650, "percent": 96, "cumulative": 1210 }
+  ],
+
+  "baseline_districts": [
+    { "district": "Eluru", "planned": 120, "achieved": 100, "percent": 83, "cumulative": 100 },
+    { "district": "Krishna", "planned": 40, "achieved": 26, "percent": 65, "cumulative": 26 },
+    { "district": "NTR", "planned": 50, "achieved": 32, "percent": 64, "cumulative": 32 },
+    { "district": "YSR Kadapa", "planned": 60, "achieved": 42, "percent": 70, "cumulative": 42 },
+    { "district": "Vijiyanagaram", "planned": 90, "achieved": 48, "percent": 53, "cumulative": 48 }
+  ],
+
+  "performance_districts": [
+    { "district": "Eluru", "planned": 600, "achieved": 234, "percent": 39, "cumulative": 234 },
+    { "district": "Krishna", "planned": 1000, "achieved": 450, "percent": 45, "cumulative": 450 },
+    { "district": "NTR", "planned": 1320, "achieved": 540, "percent": 41, "cumulative": 540 },
+    { "district": "YSR Kadapa", "planned": 900, "achieved": 230, "percent": 26, "cumulative": 230 },
+    { "district": "Vijiyanagaram", "planned": 2100, "achieved": 670, "percent": 32, "cumulative": 670 }
+  ],
+
+  "process_districts": [
+    { "district": "Eluru", "planned": 50, "achieved": 22, "percent": 44, "cumulative": 22 },
+    { "district": "Krishna", "planned": 75, "achieved": 26, "percent": 35, "cumulative": 26 },
+    { "district": "NTR", "planned": 50, "achieved": 32, "percent": 64, "cumulative": 32 },
+    { "district": "YSR Kadapa", "planned": 70, "achieved": 42, "percent": 60, "cumulative": 42 },
+    { "district": "Vijiyanagaram", "planned": 45, "achieved": 21, "percent": 47, "cumulative": 21 }
+  ]
+}
